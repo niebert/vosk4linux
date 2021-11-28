@@ -4,7 +4,9 @@ echo "--------------------------------------------------------"
 echo "Vosk Installation Script (${OS4LINUX})"
 echo "--------------------------------------------------------"
 # see niebert on GitHub: https://github.com/niebert/vosk4linux
-# License: GNU Public License
+# Repository: niebert/vosk4linux is licensed under the
+# GNU General Public License v3.0
+
 ENUM=1
 SUMMARY=""
 MSG=""
