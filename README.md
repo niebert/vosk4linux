@@ -6,5 +6,5 @@ Installation script supports you in setting up VOSK for python test environment 
 
 ## Test Environment
 
-### Arch
-* [Basic Test](basic/)
+### Arch/Manjaro
+* [Basic Installation - Arch](blob/main/arch/vosk4arch_basic.sh)
