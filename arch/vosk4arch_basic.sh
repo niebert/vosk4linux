@@ -3,9 +3,10 @@ OS4LINUX="arch"
 echo "--------------------------------------------------------"
 echo "Vosk Installation Script (${OS4LINUX})"
 echo "--------------------------------------------------------"
-# see niebert on GitHub: https://github.com/niebert/vosk4linux
-# Repository: niebert/vosk4linux is licensed under the
-# GNU General Public License v3.0
+# Script from niebert on GitHub: https://github.com/niebert/vosk4linux
+# Repository: https://github.com/niebert/vosk4linux is licensed under the
+# GNU General Public License v3.0 
+# URL: https://github.com/niebert/vosk4linux/blob/main/LICENSE
 
 ENUM=1
 SUMMARY=""
