@@ -3,6 +3,8 @@ OS4LINUX="arch"
 echo "--------------------------------------------------------"
 echo "Vosk Installation Script (${OS4LINUX})"
 echo "--------------------------------------------------------"
+# see niebert on GitHub: https://github.com/niebert/vosk4linux
+# License: GNU Public License
 ENUM=1
 SUMMARY=""
 MSG=""
@@ -82,19 +84,13 @@ if [ $ANSWER = "e" ]
 fi
 if [ $ANSWER = "E" ]
     then
-		NAME4MODEL="vosk-model-en-us-0.15"
+	NAME4MODEL="vosk-model-en-us-0.15"
         URL4MODEL="${PATH4MODEL}/${NAME4MODEL}.zip"
         wget "$URL4MODEL"
         unzip "${NAME4MODEL}.zip"
-		mv "$NAME4MODEL" model
+	mv "$NAME4MODEL" model
         SUMMARY+="$MESSAGE - $NAME4MODEL was downloaded - DONE\n";
-		echo "${SUMMARY}"
-        #git clone https://github.com/alphacep/vosk-api
-		#cd vosk-api/python/example
-		#wget vosk-model-small-en-us-0.15.zip
-		#unzip vosk-model-small-en-us-0.15.zip
-		#mv vosk-model-small-en-us-0.15 model
-		#python3 ./test_simple.py test.wav
+	echo "${SUMMARY}"
 fi
 if [ $ANSWER = "g" ]
     then
@@ -102,9 +98,9 @@ if [ $ANSWER = "g" ]
         URL4MODEL="${PATH4MODEL}/${NAME4MODEL}.zip"
         wget "$URL4MODEL"
         unzip "${NAME4MODEL}.zip"
-		mv "$NAME4MODEL" model
+	mv "$NAME4MODEL" model
         SUMMARY += "$MESSAGE - $NAME4MODEL was downloaded - DONE\n";
-		echo "${SUMMARY}"
+	echo "${SUMMARY}"
 fi
 if [ $ANSWER = "G" ]
     then
@@ -122,9 +118,9 @@ if [ $ANSWER = "f" ]
         URL4MODEL="${PATH4MODEL}/${NAME4MODEL}.zip"
         wget "$URL4MODEL"
         unzip "${NAME4MODEL}.zip"
-		mv "$NAME4MODEL" model
+	mv "$NAME4MODEL" model
         SUMMARY+="$MESSAGE - $NAME4MODEL was downloaded - DONE\n";
-		echo "${SUMMARY}"
+	echo "${SUMMARY}"
 fi
 if [ $ANSWER = "F" ]
     then
@@ -132,10 +128,11 @@ if [ $ANSWER = "F" ]
         URL4MODEL="${PATH4MODEL}/${NAME4MODEL}.zip"
         wget "$URL4MODEL"
         unzip "${NAME4MODEL}.zip"
-		mv "$NAME4MODEL" model
+	mv "$NAME4MODEL" model
         SUMMARY+="$MESSAGE - $NAME4MODEL was downloaded - DONE\n";
-		echo "${SUMMARY}"
+	echo "${SUMMARY}"
 fi
+# current directory is vosk-api/python/example
 
 ENUM+=1
 echo "--------------------------------------------------------"
@@ -149,23 +146,25 @@ if [ $ANSWER = "y" ]
 fi
 if [ $ANSWER = "Y" ]
     then
-		if [ $OS4LINUX = "arch" ]
-			then
-				sudo  pacman -S pycharm-community-edition
-				SUMMARY+="$MESSAGE is DONE\n";
-				echo "${SUMMARY}"
+	if [ $OS4LINUX = "arch" ]
+		then
+			sudo  pacman -S pycharm-community-edition
+			SUMMARY+="$MESSAGE is DONE\n";
+			echo "${SUMMARY}"
 
-		fi
-		if [ $OS4LINUX = "ubuntu" ]
-			then
-				sudo  pacman -S pycharm-community-edition
-				SUMMARY+="$MESSAGE is DONE\n";
-				echo "${SUMMARY}"
+	fi
+	if [ $OS4LINUX = "ubuntu" ]
+		then
+			sudo  pacman -S pycharm-community-edition
+			SUMMARY+="$MESSAGE is DONE\n";
+			echo "${SUMMARY}"
 
-		fi
+	fi
 fi
 
 ############ VOSK #########################
+# current directory is vosk-api/python/example
+
 ENUM+=1
 echo "--------------------------------------------------------"
 MESSAGE="(${ENUM}) Test VOSK with WAV File";
@@ -179,10 +178,36 @@ if [ $ANSWER = "y" ]
 fi
 if [ $ANSWER = "Y" ]
     then
-		python3 ./test_simple.py test.wav
-		SUMMARY+="$MESSAGE is DONE\n";
-		echo "${SUMMARY}"
+	python3 ./test_simple.py test.wav
+	SUMMARY+="$MESSAGE is DONE\n";
+	echo "${SUMMARY}"
 fi
+
+############ VOSK PYTHON SETUP #########################
+# current directory is vosk-api/python/example
+cd ..
+# current directory is vosk-api/python
+
+ENUM+=1
+echo "--------------------------------------------------------"
+MESSAGE="(${ENUM}) Python VOSK Setup Call";
+echo "${MESSAGE}"
+# mkdir "vosk4python"
+ANSWER="Y"
+read -e -p  "Do want to call the setup for VOSK in Python? (Y/N) " ANSWER
+if [ $ANSWER = "y" ]
+    then
+        ANSWER="Y"
+fi
+if [ $ANSWER = "Y" ]
+    then
+    	cd ..
+	sudo python3 ./setup.py install
+	SUMMARY+="$MESSAGE is DONE\n";
+	echo "${SUMMARY}"
+fi
+
+
 
 
 echo "--------------------------------------------------------"
