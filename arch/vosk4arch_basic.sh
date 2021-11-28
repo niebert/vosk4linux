@@ -1,5 +1,6 @@
 #!/bin/bash
 OS4LINUX="arch"
+# OS4LINUX="ubuntu"
 echo "--------------------------------------------------------"
 echo "Vosk Installation Script (${OS4LINUX})"
 echo "--------------------------------------------------------"
@@ -158,7 +159,7 @@ if [ $ANSWER = "Y" ]
 	fi
 	if [ $OS4LINUX = "ubuntu" ]
 		then
-			sudo  pacman -S pycharm-community-edition
+			sudo apt-get install pycharm-community-edition
 			SUMMARY+="$MESSAGE is DONE\n";
 			echo "${SUMMARY}"
 
