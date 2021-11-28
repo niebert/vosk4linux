@@ -14,5 +14,9 @@ The basic installation shows how to prompt the users if the want to install
 
 The installation ist based on the documentation for VOSK at https://alphacephei.com/vosk/install
 
+## Check the Bash Script
+Check the bash script prior to execution (e.g. [`bash vosk4arch_basic.sh`](blob/main/arch/vosk4arch_basic.sh)) if the installation command meet your requirements expectation.
+If you are OK with the installation procedures perform the script for your Linux distribution, e.g. [`bash vosk4arch_basic.sh`](blob/main/arch/vosk4arch_basic.sh) to perform the basic VOSK installation on an [Arch Linux](https://archlinux.org/).
+
 ### Arch/Manjaro
-* [Basic Installation - Arch](blob/main/arch/vosk4arch_basic.sh)
+* [Basic Installation - Arch](blob/main/arch/vosk4arch_basic.sh) - tested on [Arch Linux](https://archlinux.org/) and [Manjaro](https://manjaro.org/).
