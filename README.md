@@ -19,4 +19,4 @@ Check the bash script prior to execution (e.g. [`bash vosk4arch_basic.sh`](arch/
 If you are OK with the installation procedures perform the script for your Linux distribution, e.g. [`bash vosk4arch_basic.sh`](blob/main/arch/vosk4arch_basic.sh) to perform the basic VOSK installation on an [Arch Linux](https://archlinux.org/).
 
 ### Arch/Manjaro
-* [Basic Installation - Arch](arch/vosk4arch_basic.sh) - tested on [Arch Linux](https://archlinux.org/) and [Manjaro](https://manjaro.org/).
+* **[Basic Installation - Arch](arch/vosk4arch_basic.sh)** - tested on [Arch Linux](https://archlinux.org/) and [Manjaro](https://manjaro.org/).
